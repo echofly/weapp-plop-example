@@ -1,0 +1,14 @@
+{{#if needComputed}}
+import { behavior as computedBehavior } from 'miniprogram-computed'
+{{/if}}
+const app = getApp()
+
+Component({
+  {{#if needComputed}}
+  behaviors: [computedBehavior],
+  {{/if}}
+  properties: {},
+  data: {},
+  lifetimes: {},
+  methods: {},
+})
