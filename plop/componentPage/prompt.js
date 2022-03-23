@@ -1,13 +1,13 @@
 const { notEmpty, correctPath } = require('../utils.js')
 
 module.exports = {
-  description: '生成一个组件',
+  description: '使用Component构造页面',
   prompts: [
     {
       type: 'input',
       name: 'name',
-      message: '请输入组件名称:',
-      validate: notEmpty('组件名称'),
+      message: '请输入页面名称:',
+      validate: notEmpty('页面名称'),
     },
     {
       type: 'list',
@@ -27,7 +27,7 @@ module.exports = {
     {
       type: 'input',
       name: 'path',
-      message: '请输入组件存放的路径(src/<your path>):',
+      message: '请输入页面存放的路径(src/<your path>):',
       validate: correctPath('路径'),
     },
   ],
@@ -35,12 +35,12 @@ module.exports = {
     {
       type: 'add',
       path: 'src/{{path}}/{{name}}/{{name}}.js',
-      templateFile: 'plop/component/index.js.hbs',
+      templateFile: 'plop/componentPage/index.js.hbs',
     },
     {
       type: 'add',
       path: 'src/{{path}}/{{name}}/{{name}}.json',
-      templateFile: 'plop/component/index.json.hbs',
+      templateFile: 'plop/componentPage/index.json.hbs',
     },
     {
       type: 'add',

@@ -34,8 +34,8 @@ module.exports = {
     },
     {
       type: 'add',
-      path: 'src/{{path}}/{{name}}/{{name}}.wxss',
-      templateFile: 'plop/commonHbs/index.wxss.hbs',
+      path: 'src/{{path}}/{{name}}/{{name}}.scss',
+      templateFile: 'plop/commonHbs/index.scss.hbs',
     },
   ]
 }
